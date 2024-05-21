@@ -34,9 +34,11 @@ public class Desafio {
                 double valor = leitura.nextDouble();
                 if (valor > saldo) {
                     System.out.println("Não há saldo para realizar a transferência.");
-                } else {
+                } else if (valor > 0) {
                     saldo -= valor;
                     System.out.println("Novo saldo: " + saldo);
+                } else {
+                     System.out.println("Valor Inválido! O valor para transferência deve ser maior que zero.");
                 }
             } else if (opcao == 3) {
                 System.out.println("Valor recebido: ");
